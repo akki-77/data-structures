@@ -27,11 +27,11 @@ public class SubSequence {
             return;
         }
 
-        // Take
+        // Pick
         ds.add(arr[ind]);
         findSubSeq(ind+1, arr, ds);
 
-        // Not Take
+        // Not Pick
         ds.remove(ds.size() - 1);
         findSubSeq(ind+1, arr, ds);
     }
