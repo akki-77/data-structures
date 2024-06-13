@@ -19,7 +19,7 @@ public class Digits {
     }
 
     // Similarly you can check for palindrome as well.
-public void reverseNum(int n) {
+    public void reverseNum(int n) {
         int numCopy = n;
         int revNum = 0;
         while(n>0) {
@@ -36,7 +36,7 @@ public void reverseNum(int n) {
             if(n%i == 0){
                 divisorsList.add(i);
                 // If n is a square number like 6^2 (n is 36)
-if( i != Math.sqrt(n)) {
+        if( i != Math.sqrt(n)) {
                     divisorsList.add(n/i);
                 }
             }
