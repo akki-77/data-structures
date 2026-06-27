@@ -6,7 +6,7 @@ public class Digits {
 
     public void countDigits1(int n) {
         int count = 0;
-        while(n > 0) {
+        while (n > 0) {
             n /= 10;
             count += 1;
         }
@@ -22,22 +22,22 @@ public class Digits {
     public void reverseNum(int n) {
         int numCopy = n;
         int revNum = 0;
-        while(n>0) {
+        while (n > 0) {
             int lastDigit = n % 10;
             n /= 10;
-            revNum = revNum*10 + lastDigit;
+            revNum = revNum * 10 + lastDigit;
         }
         System.out.println(revNum);
     }
 
     public void printAllDivisors(int n) {
         ArrayList<Integer> divisorsList = new ArrayList<>();
-        for(int i=1; i<=Math.sqrt(n); i++) {
-            if(n%i == 0){
+        for (int i = 1; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
                 divisorsList.add(i);
                 // If n is a square number like 6^2 (n is 36)
-        if( i != Math.sqrt(n)) {
-                    divisorsList.add(n/i);
+                if (i != Math.sqrt(n)) {
+                    divisorsList.add(n / i);
                 }
             }
         }

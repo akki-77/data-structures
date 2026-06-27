@@ -15,22 +15,23 @@ public class ReverseArray {
     }
 
     public int[] swapArray(int[] arr) {
-        int l=0;
-        int r=arr.length-1;
+        int l = 0;
+        int r = arr.length - 1;
 
-        if(l<=r){
+        if (l <= r) {
             arr = swap(l++, r--, arr);
-//              OR
-//            l++;
-//            r--;
+            // OR
+            // l++;
+            // r--;
         }
         return arr;
     }
+
     public static void main(String[] args) {
         System.out.println("Inside Main!");
 
         ReverseArray reverseArray = new ReverseArray();
-        int[] nums = {1, 2, 3, 4, 5};
+        int[] nums = { 1, 2, 3, 4, 5 };
         int[] res = reverseArray.swapArray(nums);
         System.out.println(Arrays.toString(res));
     }

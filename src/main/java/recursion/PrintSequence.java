@@ -7,13 +7,14 @@ public class PrintSequence {
     public void print(int i) {
         System.out.println(i);
     }
+
     public void recursiveFunction(int i, int num) {
-        if(i<= num) {
-            // print(i);   // 1,2,3,4,5
+        if (i <= num) {
+            // print(i); // 1,2,3,4,5
 
-            recursiveFunction(i+1, num);
+            recursiveFunction(i + 1, num);
 
-            print(i);   // 5,4,3,2,1 (Will print from the stack )
+            print(i); // 5,4,3,2,1 (Will print from the stack )
         }
     }
 

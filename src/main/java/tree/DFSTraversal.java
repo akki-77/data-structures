@@ -3,11 +3,10 @@ Find the DFS Traversal of a Binary Tree
 {1,2,3,4,5,6,7} >
  */
 
-
 public class DFSTraversal {
 
     public void preOrder(TreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         System.out.print(node.val + " ");
@@ -16,7 +15,7 @@ public class DFSTraversal {
     }
 
     public void inOrder(TreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         inOrder(node.left);
@@ -25,7 +24,7 @@ public class DFSTraversal {
     }
 
     public void postOrder(TreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         postOrder(node.left);
@@ -45,8 +44,8 @@ public class DFSTraversal {
         root.right.right = new TreeNode(7);
 
         DFSTraversal dFSTraversal = new DFSTraversal();
-//        dFSTraversal.preOrder(root);
-//        dFSTraversal.inOrder(root);
+        // dFSTraversal.preOrder(root);
+        // dFSTraversal.inOrder(root);
         dFSTraversal.postOrder(root);
     }
 }

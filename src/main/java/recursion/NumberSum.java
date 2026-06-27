@@ -5,10 +5,10 @@ Functional Recursion
 public class NumberSum {
 
     public int recursiveSum(int n) {
-        if(n == 0){
+        if (n == 0) {
             return 0;
         } else {
-            return n + recursiveSum(n-1);
+            return n + recursiveSum(n - 1);
         }
     }
 

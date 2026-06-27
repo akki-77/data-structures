@@ -3,28 +3,27 @@ Find the BFS Traversal of a Binary Tree
 {1,2,3,4,5,6,7} >
  */
 
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFSTraversal {
 
     public void levelOrder(TreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode currNode = queue.poll();
             System.out.print(currNode.val + " ");
 
-            if(currNode.left != null) {
+            if (currNode.left != null) {
                 queue.offer(currNode.left);
             }
-            if(currNode.right != null) {
+            if (currNode.right != null) {
                 queue.offer(currNode.right);
             }
         }

@@ -14,14 +14,13 @@ f(3, {3,1,2})  f(3, {3,1})    f(3, {3,2})  f(3, {3})        f(3, {1,2})  f(3, {1
 
  */
 
-
 import java.util.ArrayList;
 
 public class SubSequence {
 
     public void findSubSeq(int ind, int[] arr, ArrayList<Integer> ds) {
 
-        if(ind >= arr.length) {
+        if (ind >= arr.length) {
             System.out.print(ds);
             System.out.println();
             return;
@@ -29,16 +28,16 @@ public class SubSequence {
 
         // Pick
         ds.add(arr[ind]);
-        findSubSeq(ind+1, arr, ds);
+        findSubSeq(ind + 1, arr, ds);
 
         // Not Pick
         ds.remove(ds.size() - 1);
-        findSubSeq(ind+1, arr, ds);
+        findSubSeq(ind + 1, arr, ds);
     }
 
     public static void main(String[] args) {
         SubSequence subSequence = new SubSequence();
-        int[] arr = {3,1,2};
+        int[] arr = { 3, 1, 2 };
         ArrayList<Integer> ds = new ArrayList<>();
 
         subSequence.findSubSeq(0, arr, ds);
